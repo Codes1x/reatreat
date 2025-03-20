@@ -10,6 +10,7 @@ import CateringOptions from "@/components/organizers/CateringOptions.vue";
 import FamousOrganizers from "@/components/organizers/FamousOrganizers.vue";
 import CostCalculator from "@/components/organizers/CostCalculator.vue";
 import ContactForm from "@/components/organizers/ContactForm.vue";
+import ContactUs from "@/components/ContactUs.vue";
 </script>
 
 <template>
@@ -22,6 +23,6 @@ import ContactForm from "@/components/organizers/ContactForm.vue";
     <CateringOptions />
     <FamousOrganizers />
     <CostCalculator />
-    <ContactForm />
+    <ContactUs />
   </div>
 </template>
