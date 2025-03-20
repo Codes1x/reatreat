@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="bg-white py-4 w-full fixed top-0 z-50">
+    <nav class="fixed top-0 left-0 w-full bg-white z-50 shadow-md">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-24">
         <NuxtLink to="/" class="flex items-center gap-2">
           <Leaf class="h-10 w-10 text-green-600" />
