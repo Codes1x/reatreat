@@ -6,6 +6,8 @@ import OrganizerGuestSection from "@/components/OrganizerGuestSection.vue";
 import ReviewsSection from "@/components/ReviewsSection.vue";
 import ContactForm from "@/components/ContactForm.vue";
 import HowToGet from "@/components/HowToGet.vue";
+import ContactUs from "@/components/ContactUs.vue";
+
 </script>
 
 <template>
@@ -17,5 +19,6 @@ import HowToGet from "@/components/HowToGet.vue";
     <ReviewsSection />
     <ContactForm />
     <HowToGet />
+    <ContactUs />
   </div>
 </template>

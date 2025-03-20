@@ -10,7 +10,7 @@
         <div class="hidden md:flex space-x-8 items-center font-medium text-gray-900">
           <NuxtLink class="hover:text-green-600 transition-colors" to="/">Главная</NuxtLink>
           <NuxtLink class="hover:text-green-600 transition-colors" to="/organizers">Организаторам</NuxtLink>
-          <NuxtLink class="hover:text-green-600 transition-colors" to="/#guests">Для гостей</NuxtLink>
+          <NuxtLink class="hover:text-green-600 transition-colors" to="/guests">Для гостей</NuxtLink>
           <NuxtLink class="hover:text-green-600 transition-colors" to="/#long-stay" @click="scrollToSection('long-stay')">Длительное проживание</NuxtLink>
           <NuxtLink class="hover:text-green-600 transition-colors" to="/#contacts">Контакты</NuxtLink>
         </div>
