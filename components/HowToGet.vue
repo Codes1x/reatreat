@@ -1,65 +1,81 @@
 <template>
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center">
-          Как добраться
-        </h2>
-        <p class="mt-4 text-lg text-gray-600 text-center">
-          Удобные способы доехать до нашего ретрит-центра.
-        </p>
-  
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Адрес -->
-          <div class="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md">
-            <MapPin class="w-10 h-10 text-blue-600 flex-shrink-0" />
+  <section class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+        Как добраться
+      </h2>
+      <p class="text-center text-gray-600 mb-10">
+        Удобные способы добраться до нашего ретрит-центра
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <!-- На машине -->
+        <div class="bg-white rounded-xl shadow p-6">
+          <div class="flex items-start gap-4">
+            <Car class="w-6 h-6 text-green-600 mt-1" />
             <div>
-              <h3 class="text-xl font-semibold text-gray-900">Адрес</h3>
-              <p class="text-gray-600">Сочи, п. Лоо</p>
+              <h3 class="text-lg font-semibold text-gray-900">На машине</h3>
+              <p class="text-gray-600 mt-1">
+                В навигаторе введите <span class="font-medium">«Соната», г. Сочи, ул. Декабристов</span>
+              </p>
+              <a
+                href="https://yandex.ru/maps"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center text-green-600 font-semibold mt-2 hover:underline"
+              >
+                Открыть маршрут
+                <ArrowRight class="w-4 h-4 ml-1" />
+              </a>
             </div>
           </div>
-  
-          <!-- Поезд -->
-          <div class="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md">
-            <TrainFrontIcon class="w-10 h-10 text-blue-600 flex-shrink-0" />
+        </div>
+
+        <!-- Поезд -->
+        <div class="bg-white rounded-xl shadow p-6">
+          <div class="flex items-start gap-4">
+            <Train class="w-6 h-6 text-green-600 mt-1" />
             <div>
-              <h3 class="text-xl font-semibold text-gray-900">Поезд</h3>
-              <p class="text-gray-600">До станции Лоо (2 мин на машине)</p>
-            </div>
-          </div>
-  
-          <!-- Машина -->
-          <div class="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md">
-            <CarFront class="w-10 h-10 text-blue-600 flex-shrink-0" />
-            <div>
-              <h3 class="text-xl font-semibold text-gray-900">На машине</h3>
-              <p class="text-gray-600">
-                В навигаторе: гостиница Соната (г. Сочи, ул. Декабристов)
+              <h3 class="text-lg font-semibold text-gray-900">Поезд</h3>
+              <p class="text-gray-600 mt-1">
+                До станции Лоо<br />
+                <span class="font-medium text-gray-900">50 мин на машине</span>
               </p>
             </div>
           </div>
-  
-          <!-- Самолет -->
-          <div class="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md">
-            <Plane class="w-10 h-10 text-blue-600 flex-shrink-0" />
+        </div>
+
+        <!-- Адрес -->
+        <div class="bg-white rounded-xl shadow p-6">
+          <div class="flex items-start gap-4">
+            <MapPin class="w-6 h-6 text-green-600 mt-1" />
             <div>
-              <h3 class="text-xl font-semibold text-gray-900">Самолет</h3>
-              <p class="text-gray-600">
-                Аэропорт Сочи. Есть электрички прямо из аэропорта, но редко.
-                Удобнее доехать на такси или автобусе до ж/д вокзала Адлер (15 мин),
-                затем скоростная электричка Ласточка до Горного воздуха (10 мин пешком)
-                или до Лоо (5 мин на машине).
+              <h3 class="text-lg font-semibold text-gray-900">Адрес</h3>
+              <p class="text-gray-600 mt-1">
+                Сочи, ул. Декабристов
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Самолет -->
+        <div class="bg-white rounded-xl shadow p-6">
+          <div class="flex items-start gap-4">
+            <Plane class="w-6 h-6 text-green-600 mt-1" />
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">Самолет</h3>
+              <p class="text-gray-600 mt-1">
+                Аэропорт Сочи<br />
+                <span class="font-medium text-gray-900">1 ч 30 мин на машине</span>
               </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </template>
-  
-  <script setup>
+    </div>
+  </section>
+</template>
 
-import { CarFront, MapPin, Plane, TrainFrontIcon } from "lucide-vue-next";
-
-  </script>
-  
-  
+<script setup>
+import { Car, MapPin, Plane, Train, ArrowRight } from 'lucide-vue-next'
+</script>

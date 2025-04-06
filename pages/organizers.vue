@@ -12,15 +12,14 @@ import RoomPrices from "@/components/organizers/RoomPrices.vue";
 import CateringOptions from "@/components/organizers/CateringOptions.vue";
 import FamousOrganizers from "@/components/organizers/FamousOrganizers.vue";
 import CostCalculator from "@/components/organizers/CostCalculator.vue";
-
+import Events from "@/components/events/Events.vue";
 import ContactUs from "@/components/ContactUs.vue";
 </script>
 
 <template>
   <div>
 
-    <HeroSection />
-  
+    <HeroSection />  
     <RetreatIntro />
     <VenuesAndSpaces />
     <PhotoGallery />
@@ -30,6 +29,7 @@ import ContactUs from "@/components/ContactUs.vue";
     <CateringOptions />
     <FamousOrganizers />
     <CostCalculator />
+    <Events />
     <ContactUs />
   </div>
 </template>
