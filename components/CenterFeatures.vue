@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { Baby, House, LandPlot, Waves } from 'lucide-vue-next';
+import { Utensils, House, LandPlot, Waves } from 'lucide-vue-next';
 
 const features = [
   {
@@ -44,9 +44,9 @@ const features = [
     icon: LandPlot,
   },
   {
-    title: "Детская комната",
-    description: "Безопасное пространство для детей с играми и занятиями.",
-    icon: Baby,
+    title: "Питание",
+    description: "Вегетарианское и сбалансированное питание, подходящее для практик.",
+    icon: Utensils,
   }
 ];
 </script>

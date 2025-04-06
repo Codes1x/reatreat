@@ -1,74 +1,61 @@
 <template>
-    <section class="py-16 px-8 text-center">
-      <h2 class="text-4xl font-bold text-teal-700 mb-4">Залы и площадки для ваших мероприятий</h2>
-      <p class="text-gray-600 mb-8">Площадки в лесу и залы с панорамными окнами и видом на море полностью оборудованы всем необходимым</p>
-  
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div v-for="(venue, index) in venues" :key="index" class="bg-white shadow-lg rounded-lg overflow-hidden">
-          <img :src="venue.image" :alt="venue.title" class="w-full h-56 object-cover">
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-teal-700 mb-2">{{ venue.title }}</h3>
-            <p class="text-sm text-gray-600">{{ venue.description }}</p>
-            <button class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">
-              Подробнее
-            </button>
-          </div>
+  <section class="bg-white rounded-2xl shadow-md p-6 md:p-10 max-w-5xl mx-auto text-gray-800">
+    <h2 class="text-2xl md:text-3xl font-bold text-[#143642] mb-6 text-center italic">Наши преимущества</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div v-for="(item, index) in benefits" :key="index" class="flex items-start">
+        <div class="text-[#143642] text-2xl mr-4">
+          {{ item.icon }}
+        </div>
+        <div>
+          <p class="font-semibold text-lg text-[#143642] mb-1">{{ item.title }}</p>
+          <p class="text-gray-700 leading-relaxed" v-html="item.description" />
         </div>
       </div>
-    </section>
-  </template>
-  
-  <script setup>
-  const venues = [
-    {
-      title: "Большой зал 240 м²",
-      description: "Просторный зал с хорошей шумоизоляцией и подогреваемыми полами",
-      image: "images/organizers.jpg"
-    },
-    {
-      title: "Большой зал 120 м²",
-      description: "С музыкальным оборудованием",
-      image: "images/organizers.jpg"
-    },
-    {
-      title: "Малый зал 60 м²",
-      description: "Оборудованный для йоги",
-      image: "images/organizers.jpg"
-    },
-    {
-      title: "Эксплуатируемая кровля 130 м²",
-      description: "Свежий воздух и вид на море",
-      image: "images/organizers.jpg"
-    },
-    {
-      title: "Площадка в лесу большая 90 м²",
-      description: "Сеть 220В, свет",
-      image: "images/organizers.jpg"
-    },
-    {
-      title: "Площадка в лесу малая 40 м²",
-      description: "Сеть 220В, свет",
-      image: "images/organizers.jpg"
-    },
-    {
-      title: "Костровая площадка с очагом",
-      description: "Располагаются до 60 человек",
-      image: "images/organizers.jpg"
-    },
-    {
-      title: "Кафе Veg/Vegan/Raw/Detox/Ayurvedic",
-      description: "Вкуснейшая, сбалансированная, одухотворённая вегетарианская еда",
-      image: "images/organizers.jpg"
-    }
-  ];
-  </script>
-  
-  <style scoped>
-  button {
-    transition: transform 0.2s ease-in-out;
-  }
-  button:hover {
-    transform: translateY(-2px);
-  }
-  </style>
-  
+    </div>
+  </section>
+</template>
+
+<script setup>
+const benefits = [
+  {
+    icon: "🌊",
+    title: "Уникальное расположение",
+    description:
+      "Шаговая доступность к морю, медитации на пляже, утренние и вечерние практики под звуки прибоя.",
+  },
+  {
+    icon: "🌿",
+    title: "Открытые площадки",
+    description:
+      "Две просторные площадки с панорамным видом на море и горы — идеальны для йоги, цигун, дыхательных практик и встреч восхода солнца.",
+  },
+  {
+    icon: "🛋",
+    title: "Уютный крытый зал",
+    description:
+      "С креплениями для гамаков. Подходит для мастер-классов, трансформационных игр и отдыха в расслабляющей атмосфере.",
+  },
+  {
+    icon: "💦",
+    title: "Бассейн с подогревом",
+    description:
+      "Место для релаксации, водных практик или восстановления после насыщенного дня.",
+  },
+  {
+    icon: "🛌",
+    title: "Комфортные номера",
+    description:
+      "Уютные, светлые, продуманные до мелочей — чтобы каждый гость чувствовал себя как дома.",
+  },
+  {
+    icon: "🧘",
+    title: "Инвентарь для практик",
+    description:
+      "Коврики, кирпичи, пледы, ремни — всё предоставляется <strong>бесплатно</strong>.",
+  },
+]
+</script>
+
+<style scoped>
+</style>
