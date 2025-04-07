@@ -1,81 +1,46 @@
-<template>
-  <div class="w-full max-w-4xl mx-auto py-10 text-center">
-    <!-- Заголовок -->
-    <h2 class="text-3xl font-semibold text-gray-800">Фотогалерея</h2>
-    <p class="text-gray-600 mt-2">Посмотрите, как выглядит наш ретрит-центр и его окрестности.</p>
+<script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
-    <!-- Основной Swiper -->
-    <swiper
-      :modules="[Navigation, Thumbs]"
-      :spaceBetween="20"
-      :slidesPerView="1"
-      :navigation="true"
-      :thumbs="{ swiper: thumbsSwiper }"
-      class="rounded-lg shadow-lg overflow-hidden mt-6"
-    >
-      <swiper-slide v-for="(image, index) in images" :key="index">
-        <div class="relative w-full h-96">
-          <img :src="image.src" :alt="image.alt" class="w-full h-full object-cover rounded-lg" />
-        </div>
-      </swiper-slide>
-    </swiper>
+import { Autoplay } from 'swiper/modules'
 
-    <!-- Миниатюры -->
-    <swiper
-      :modules="[Thumbs]"
-      :spaceBetween="10"
-      :slidesPerView="5"
-      :watchSlidesProgress="true"
-      @swiper="setThumbsSwiper"
-      class="mt-4"
-    >
-      <swiper-slide v-for="(image, index) in images" :key="index">
-        <img :src="image.src" :alt="image.alt" class="w-full h-20 object-cover rounded cursor-pointer" />
-      </swiper-slide>
-    </swiper>
-  </div>
-</template>
-
-<script>
-import { ref } from "vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Thumbs } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    const images = [
-      { src: "/images/guests.jpg", alt: "Гостиный дом" },
-      { src: "/images/organizers.jpg", alt: "Организаторы на мероприятии" },
-      { src: "/images/user1.jpg", alt: "Гости центра" },
-      { src: "/images/user2.jpg", alt: "Спокойная атмосфера" },
-      { src: "/images/user3.jpg", alt: "Расслабляющая природа" },
-    ];
-
-    const thumbsSwiper = ref(null);
-
-    const setThumbsSwiper = (swiper) => {
-      thumbsSwiper.value = swiper;
-    };
-
-    return { images, Navigation, Thumbs, thumbsSwiper, setThumbsSwiper };
-  },
-};
+const images = [
+  '/images/gallery1.jpg',
+  '/images/gallery2.jpg',
+  '/images/gallery3.jpg',
+  '/images/gallery4.jpg',
+  '/images/gallery5.jpg',
+  '/images/gallery6.jpg'
+]
 </script>
 
-<style>
-.swiper-button-next,
-.swiper-button-prev {
-  color: black;
-}
-
-.swiper-slide-thumb-active img {
-  border: 2px solid #008080;
-}
-</style>
+<template>
+  <section class="py-16 bg-gray-50 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-10">Фото галерея центра</h2>
+    <ClientOnly>
+      <Swiper
+        :modules="[Autoplay]"
+        :slides-per-view="4"
+        :space-between="24"
+        :loop="true"
+        :autoplay="{ delay: 3000, disableOnInteraction: false }"
+        class="max-w-7xl mx-auto"
+      >
+        <SwiperSlide
+          v-for="(img, index) in images"
+          :key="index"
+          class="rounded-xl overflow-hidden"
+        >
+          <img
+            :src="img"
+            alt="Фото центра"
+            class="object-cover w-full h-[320px] transition-transform duration-300 hover:scale-105"
+          />
+        </SwiperSlide>
+      </Swiper>
+    </ClientOnly>
+  </section>
+</template>

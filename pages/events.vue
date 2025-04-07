@@ -11,7 +11,7 @@ import ContactUs from "@/components/ContactUs.vue";
 <template>
   <div>
 
-    <HeroSection />
+   
     <Events />
    
     <ContactUs />

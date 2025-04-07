@@ -1,6 +1,7 @@
 
 <template>
-    <section class="bg-white rounded-2xl shadow-md p-6 md:p-10 max-w-3xl mx-auto text-gray-800 space-y-6">
+    <section class="bg-white rounded-2xl shadow-md p-6 md:p-10 max-w-3xl mx-auto text-gray-800 space-y-6 mb-20">
+
       <h2 class="text-3xl md:text-4xl font-bold text-[#143642] text-center">Номера</h2>
   
       <p class="text-center text-lg text-gray-700 max-w-xl mx-auto">
@@ -28,10 +29,4 @@
     </section>
   </template>
   
-  <script setup>
-  // ничего не требуется
-  </script>
-  
-  <style scoped>
-  </style>
-  
+ 

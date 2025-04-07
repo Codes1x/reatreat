@@ -37,10 +37,7 @@
         </button>
 
         <!-- Скроллируемый блок -->
-        <div
-          ref="scrollContainer"
-          class="overflow-x-auto scrollbar-hide snap-x snap-mandatory"
-        >
+        <div ref="scrollContainer"  class="overflow-x-auto scrollbar-hide snap-x snap-mandatory">
           <div class="flex gap-6 w-max px-6">
             <div
               v-for="(place, index) in loopedPlaces"
@@ -98,43 +95,43 @@ const places = [
     title: "Аквапарк АкваЛоо",
     description: "Единственный из аквапарков Черноморского побережья, который работает круглый год.",
     distance: "1 км от нас",
-    image: "/images/1.jpg"
+    image: "/images/2.png"
   },
   {
     title: "Церковь Симона Кананита",
     description: "Одно из главных украшений курортного поселка.",
     distance: "3 км от нас",
-    image: "/images/1.jpg"
+    image: "/images/11.png"
   },
   {
     title: "Дача доктора Павлова (1907 год)",
     description: "Самая красивая дача в округе Сочи.",
     distance: "5.8 км от нас",
-    image: "/images/1.jpg"
+    image: "/images/5.png"
   },
   {
     title: "Лестница Шереметева",
     description: "Лестница к бывшему дому графа.",
     distance: "3.1 км от нас",
-    image: "/images/1.jpg"
+    image: "/images/6.png"
   },
   {
     title: "Водопад Райское наслаждение",
     description: "Очень лёгкий и красивый маршрут. Идеально для похода.",
     distance: "8.8 км от нас",
-    image: "/images/1.jpg"
+    image: "/images/7.png"
   },
   {
     title: "Развалины Византийского храма",
     description: "На вершине 300-метровой горы.",
     distance: "1.5 км от нас",
-    image: "/images/1.jpg"
+    image: "/images/Rectangle_66.png"
   },
   {
     title: "Набережная «Горный воздух»",
     description: "Один из лучших пляжей в Большом Сочи для отдыхающих.",
     distance: "600 м от нас",
-    image: "/images/1.jpg"
+    image: "/images/3.jpg"
   }
 ]
 
