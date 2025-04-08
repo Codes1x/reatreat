@@ -1,8 +1,8 @@
 <template>
-  <section class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between mt-[-50px]">
-    <div class="w-full md:w-1/2 md:pr-8">
+  <section class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-stretch justify-between mt-[-50px]">
+    <div class="w-full md:w-1/2 md:pr-8 flex flex-col justify-center">
       <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-6">
-        <span class="text-green-600">Ретритный центр</span><br>в Сочи
+        <span class="text-green-600">Ретритный центр</span><br />в Сочи
       </h1>
       <p class="text-gray-900 mb-8 text-lg">
         Место силы для благостного отдыха с мощной энергетикой реликтового леса, идеально подходит для:
@@ -35,19 +35,22 @@
         </button>
       </div>
 
-      <button class="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 transition text-lg">
+      <button
+        @click="$emit('scroll-to-center')"
+        class="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 transition text-lg"
+      >
         Подробнее
       </button>
     </div>
 
-    <div class="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
-      <iframe
-        src="https://player.vimeo.com/video/82701136"
-        class="rounded-2xl w-full h-[300px] md:h-[400px] border-0"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+    <div class="w-full md:w-1/2 flex justify-center items-stretch mt-8 md:mt-0">
+      <div class="rounded-2xl shadow-lg overflow-hidden w-full h-auto border border-gray-200">
+        <img
+          src="/images/yoga.jpg"
+          alt="Йога на открытом воздухе"
+          class="w-full h-full object-cover"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -57,5 +60,7 @@ import { Globe, Music, Zap, Sparkles, Flower, Heart } from 'lucide-vue-next';
 </script>
 
 <style scoped>
-/* Можно добавить стили, если необходимо */
+img {
+  border-radius: 16px;
+}
 </style>

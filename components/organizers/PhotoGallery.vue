@@ -1,46 +1,51 @@
+<template>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" ref="galleryRef">
+    <div
+      v-for="(img, index) in images"
+      :key="index"
+      class="w-full h-48 bg-red-500 rounded-xl cursor-pointer transition-transform hover:scale-105 duration-300"
+      @click="openGallery(index)"
+    ></div>
+  </div>
+</template>
+
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import 'swiper/css'
-import 'swiper/css/autoplay'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import { ref, onMounted, onUnmounted } from 'vue'
+import PhotoSwipeLightbox from 'photoswipe/lightbox'
+import 'photoswipe/style.css'
 
-import { Autoplay } from 'swiper/modules'
+const galleryRef = ref(null)
 
-const images = [
-  '/images/gallery1.jpg',
-  '/images/gallery2.jpg',
-  '/images/gallery3.jpg',
-  '/images/gallery4.jpg',
-  '/images/gallery5.jpg',
-  '/images/gallery6.jpg'
-]
+const images = Array.from({ length: 15 }, (_, i) => ({
+  src: `https://via.placeholder.com/800x600/ff0000/ffffff?text=Фото+${i + 1}`,
+  w: 800,
+  h: 600
+}))
+
+let lightbox
+
+onMounted(() => {
+  lightbox = new PhotoSwipeLightbox({
+    gallery: galleryRef.value,
+    children: 'div',
+    pswpModule: () => import('photoswipe'),
+    dataSource: images
+  })
+  lightbox.init()
+})
+
+onUnmounted(() => {
+  lightbox?.destroy()
+})
+
+const openGallery = (index) => {
+  lightbox.loadAndOpen(index)
+}
 </script>
 
-<template>
-  <section class="py-16 bg-gray-50 text-center">
-    <h2 class="text-3xl font-bold text-gray-800 mb-10">Фото галерея центра</h2>
-    <ClientOnly>
-      <Swiper
-        :modules="[Autoplay]"
-        :slides-per-view="4"
-        :space-between="24"
-        :loop="true"
-        :autoplay="{ delay: 3000, disableOnInteraction: false }"
-        class="max-w-7xl mx-auto"
-      >
-        <SwiperSlide
-          v-for="(img, index) in images"
-          :key="index"
-          class="rounded-xl overflow-hidden"
-        >
-          <img
-            :src="img"
-            alt="Фото центра"
-            class="object-cover w-full h-[320px] transition-transform duration-300 hover:scale-105"
-          />
-        </SwiperSlide>
-      </Swiper>
-    </ClientOnly>
-  </section>
-</template>
+<style scoped>
+/* Добавим плавное появление модального окна галереи */
+.pswp__img {
+  border-radius: 12px;
+}
+</style>

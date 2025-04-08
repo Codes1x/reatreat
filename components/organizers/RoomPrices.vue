@@ -10,15 +10,15 @@
   
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
         <div class="bg-[#f7fafc] rounded-xl p-6 shadow hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-[#143642] mb-2">2 месяца</h3>
+          <h3 class="text-xl font-semibold text-[#143642] mb-2">2х местный</h3>
           <p class="text-gray-700 text-lg">от <span class="font-bold text-green-600">3 000 ₽</span> / сутки</p>
         </div>
         <div class="bg-[#f7fafc] rounded-xl p-6 shadow hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-[#143642] mb-2">3 месяца</h3>
+          <h3 class="text-xl font-semibold text-[#143642] mb-2">3х местный</h3>
           <p class="text-gray-700 text-lg">от <span class="font-bold text-green-600">4 000 ₽</span> / сутки</p>
         </div>
         <div class="bg-[#f7fafc] rounded-xl p-6 shadow hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-[#143642] mb-2">4 месяца</h3>
+          <h3 class="text-xl font-semibold text-[#143642] mb-2">4х местный</h3>
           <p class="text-gray-700 text-lg">от <span class="font-bold text-green-600">5 000 ₽</span> / сутки</p>
         </div>
       </div>

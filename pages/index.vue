@@ -1,3 +1,24 @@
+<template>
+  <div class="bg-white">
+    <HeroSection @scroll-to-center="scrollToCenterFeatures" />
+
+    <section id="center-features">
+      <CenterFeatures />
+    </section>
+
+    <Reels />
+    <OrganizerGuestSection />
+    <RoomPrices />
+    <PhotoGallery />
+    <NearbyPlaces />        
+   
+   
+    <ContactForm />
+    <HowToGet />
+    <ContactUs />
+  </div>
+</template>
+
 <script setup>
 import HeroSection from "@/components/HeroSection.vue";
 import CenterFeatures from "@/components/CenterFeatures.vue";
@@ -11,21 +32,10 @@ import HowToGet from "@/components/HowToGet.vue";
 import ContactUs from "@/components/ContactUs.vue";
 import PhotoGallery from "@/components/organizers/PhotoGallery.vue";
 
-
+const scrollToCenterFeatures = () => {
+  const target = document.getElementById('center-features')
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>
-
-<template>
-  <div class="bg-white">
-    <HeroSection />
-    <CenterFeatures />    
-    <Reels />
-    <OrganizerGuestSection />
-    <RoomPrices />
-    <NearbyPlaces />        
-    <ReviewsSection />
-    <PhotoGallery />
-    <ContactForm />
-    <HowToGet />
-    <ContactUs />
-  </div>
-</template>

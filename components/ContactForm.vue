@@ -58,11 +58,28 @@ import { ref } from 'vue'
 const name = ref('')
 const phone = ref('')
 
-const submitForm = () => {
-  console.log('Отправлено:', { name: name.value, phone: phone.value })
-  alert('Спасибо! Мы свяжемся с вами в ближайшее время.')
-  name.value = ''
-  phone.value = ''
+const submitForm = async () => {
+  try {
+    const res = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name.value,
+        phone: phone.value
+      })
+    })
+
+    if (res.ok) {
+      alert('Спасибо! Мы свяжемся с вами в ближайшее время.')
+      name.value = ''
+      phone.value = ''
+    } else {
+      alert('Ошибка при отправке')
+    }
+  } catch (error) {
+    console.error(error)
+    alert('Ошибка сервера')
+  }
 }
 </script>
 
