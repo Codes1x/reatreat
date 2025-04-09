@@ -19,7 +19,7 @@
                 В навигаторе введите <span class="font-medium">«Соната», г. Сочи, ул. Декабристов</span>
               </p>
               <a
-                href="https://yandex.ru/maps"
+                href="https://yandex.ru/map-widget/v1/-/CHVoYMkz"
                 target="_blank"
                 rel="noopener"
                 class="inline-flex items-center text-green-600 font-semibold mt-2 hover:underline"

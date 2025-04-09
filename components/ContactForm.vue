@@ -11,28 +11,40 @@
         Напишите нам — с радостью расскажем, подберем даты и поможем всё организовать 🙌
       </p>
 
+      <!-- Форма с fetch-запросом -->
       <form @submit.prevent="submitForm" class="grid gap-4">
         <input
+          v-model="name"
+          name="name"
           type="text"
           placeholder="Ваше имя"
-          v-model="name"
-          class="border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#143642]"
           required
+          class="border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#143642]"
         />
         <input
+          v-model="phone"
+          name="phone"
           type="tel"
           placeholder="Телефон или WhatsApp"
-          v-model="phone"
-          class="border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#143642]"
           required
+          class="border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#143642]"
         />
         <button
           type="submit"
-          class="bg-[#143642] text-white py-3 px-6 rounded-md hover:bg-[#102c35] transition text-lg"
+          :disabled="loading"
+          class="bg-[#143642] text-white py-3 px-6 rounded-md hover:bg-[#102c35] transition text-lg disabled:opacity-50"
         >
-          Отправить
+          {{ loading ? 'Отправка...' : 'Отправить' }}
         </button>
       </form>
+
+      <!-- Сообщение об успехе -->
+      <p
+        v-if="success"
+        class="text-green-600 mt-6 text-center text-lg font-medium"
+      >
+        🎉 Спасибо! Мы свяжемся с вами в ближайшее время.
+      </p>
 
       <div class="text-center mt-6">
         <a
@@ -57,31 +69,32 @@ import { ref } from 'vue'
 
 const name = ref('')
 const phone = ref('')
+const success = ref(false)
+const loading = ref(false)
 
 const submitForm = async () => {
-  try {
-    const res = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: name.value,
-        phone: phone.value
-      })
+  loading.value = true
+  const res = await fetch('https://formspree.io/f/mpwpkwan', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: name.value,
+      phone: phone.value
     })
+  })
 
-    if (res.ok) {
-      alert('Спасибо! Мы свяжемся с вами в ближайшее время.')
-      name.value = ''
-      phone.value = ''
-    } else {
-      alert('Ошибка при отправке')
-    }
-  } catch (error) {
-    console.error(error)
-    alert('Ошибка сервера')
+  loading.value = false
+
+  if (res.ok) {
+    success.value = true
+    name.value = ''
+    phone.value = ''
+  } else {
+    alert('Произошла ошибка. Попробуйте позже.')
   }
 }
 </script>
 
 <style scoped>
+/* ничего не требуется — всё через Tailwind */
 </style>

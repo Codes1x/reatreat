@@ -1,11 +1,13 @@
 <template>
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" ref="galleryRef">
+  <div class="columns-2 sm:columns-3 md:columns-4 gap-4" ref="galleryRef">
     <div
       v-for="(img, index) in images"
       :key="index"
-      class="w-full h-48 bg-red-500 rounded-xl cursor-pointer transition-transform hover:scale-105 duration-300"
+      class="mb-4 break-inside-avoid cursor-pointer rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-transform hover:scale-[1.02]"
       @click="openGallery(index)"
-    ></div>
+    >
+      <img :src="img.src" class="w-full h-auto object-cover rounded-xl" />
+    </div>
   </div>
 </template>
 
@@ -16,10 +18,48 @@ import 'photoswipe/style.css'
 
 const galleryRef = ref(null)
 
-const images = Array.from({ length: 15 }, (_, i) => ({
-  src: `https://via.placeholder.com/800x600/ff0000/ffffff?text=Фото+${i + 1}`,
-  w: 800,
-  h: 600
+const imageNames = [
+  "photo_2025-04-09_15-17-51.jpg",
+  "photo_2025-04-09_15-17-53.jpg",
+  "photo_2025-04-09_15-17-54 (2).jpg",
+  "photo_2025-04-09_15-17-55.jpg",
+  "photo_2025-04-09_15-17-56.jpg",
+  "photo_2025-04-09_15-17-57.jpg",
+  "photo_2025-04-09_15-17-58.jpg",
+  "photo_2025-04-09_15-17-58 (2).jpg",
+  "photo_2025-04-09_15-17-59.jpg",
+  "photo_2025-04-09_15-18-00.jpg",
+  "photo_2025-04-09_15-18-01.jpg",
+  "photo_2025-04-09_15-18-01 (2).jpg",
+  "photo_2025-04-09_15-18-02.jpg",
+  "photo_2025-04-09_15-18-02 (2).jpg",
+  "photo_2025-04-09_15-18-08.jpg",
+  "photo_2025-04-09_15-18-14.jpg",
+  "photo_2025-04-09_15-18-16.jpg",
+  "photo_2025-04-09_15-18-18.jpg",
+  "photo_2025-04-09_15-18-23.jpg",
+  "photo_2025-04-09_15-18-28.jpg",
+  "photo_2025-04-09_15-18-30.jpg",
+  "photo_2025-04-09_15-18-31.jpg",
+  "photo_2025-04-09_15-18-33.jpg",
+  "photo_2025-04-09_15-18-35.jpg",
+  "photo_2025-04-09_15-18-47.jpg",
+  "photo_2025-04-09_15-18-48.jpg",
+  "photo_2025-04-09_15-18-52.jpg",
+  "photo_2025-04-09_15-18-53.jpg",
+  "photo_2025-04-09_15-18-55.jpg",
+  "photo_2025-04-09_15-18-59.jpg",
+  "photo_2025-04-09_15-19-04.jpg",
+  "photo_2025-04-09_15-19-17.jpg",
+  "photo_2025-04-09_15-19-28.jpg",
+  "photo_2025-04-09_15-19-32.jpg",
+  "photo_2025-04-09_15-19-33.jpg"
+]
+
+const images = imageNames.map((filename) => ({
+  src: `/images/sonata/${filename}`,
+  w: 1200,
+  h: 900
 }))
 
 let lightbox
@@ -44,8 +84,11 @@ const openGallery = (index) => {
 </script>
 
 <style scoped>
-/* Добавим плавное появление модального окна галереи */
-.pswp__img {
-  border-radius: 12px;
+/* Для мягкого скролла, без обрезания */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 </style>

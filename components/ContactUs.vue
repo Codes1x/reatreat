@@ -17,7 +17,7 @@
           </a>
 
           <a
-            href="https://t.me/yourusername"
+            href="https://t.me/sonatalooyoga"
             class="flex items-center bg-blue-500 hover:bg-blue-600 text-white font-medium px-5 py-3 rounded-xl shadow transition"
             target="_blank"
           >
@@ -42,13 +42,18 @@
       </div>
 
       <!-- Карта -->
-      <div class="w-full h-[300px] rounded-xl overflow-hidden shadow">
-        <iframe
-          class="w-full h-full border-0"
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A135b22c3ec07a34e38d0c7e7f0665f2b856be7bb5d6c9ccdf83795e77602d6b6&amp;source=constructor"
-          allowfullscreen
-        ></iframe>
-      </div>
+     <!-- Карта -->
+<!-- Карта с меткой -->
+<div class="w-full h-[300px] rounded-xl overflow-hidden shadow">
+  <iframe
+    src="https://yandex.ru/map-widget/v1/-/CHVoYMkz"
+    class="w-full h-full border-0"
+    allowfullscreen
+  ></iframe>
+</div>
+
+
+
     </div>
   </section>
 </template>

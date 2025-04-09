@@ -29,13 +29,13 @@
       title: "MIX YOGA FEST",
       date: "04–11 июля 2025",
       description: "Целая неделя практик, лекций, общения и отдыха в дружелюбной и вдохновляющей атмосфере.",
-      image: "/images/1.jpg",
+      image: "/images/O5JWOcrxM-4.jpg",
     },
     {
       title: "Путь к себе",
       date: "22–28 апреля 2025",
       description: "Авторский тур с Яной Эктовой в Нараяна центре. Включено: проживание, питание, практики.",
-      image: "/images/1.jpg",
+      image: "/images/photo_2025-02-24_201.jpeg",
     }
   ];
   </script>
