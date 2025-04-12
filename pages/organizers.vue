@@ -7,7 +7,7 @@ import VenuesAndSpaces from "@/components/organizers/VenuesAndSpaces.vue";
 import PhotoGallery from "@/components/organizers/PhotoGallery.vue";
 
 import RetreatExtras from "@/components/organizers/RetreatExtras.vue";
-import RoomPrices from "@/components/organizers/RoomPrices.vue";
+import PromoSection from '@/components/sales/PromoSection.vue'
 import CateringOptions from "@/components/organizers/CateringOptions.vue";
 import ContactForm from "@/components/ContactForm.vue";
 
@@ -34,7 +34,7 @@ import Reels from "@/components/Reels.vue";
     <RetreatExtras />
     <Reels />
     <CateringOptions />
-
+    <PromoSection />
     <ContactForm />
     <Events />
     <ContactUs />

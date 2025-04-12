@@ -1,13 +1,15 @@
 <template>
   <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-6 lg:px-20">
-      <div class="text-center max-w-4xl mx-auto">
-        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-          Наши уникальные места
-        </h2>
-        <p class="mt-4 text-gray-600">
-          Уникальные места и достопримечательности в шаговой доступности.
-        </p>
+      <div class="w-full flex justify-center">
+        <div class="text-center max-w-4xl">
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Наши уникальные места
+          </h2>
+          <p class="mt-4 text-gray-600">
+            Уникальные места и достопримечательности в шаговой доступности.
+          </p>
+        </div>
       </div>
 
       <div class="relative mt-10">
@@ -19,7 +21,7 @@
             <div
               v-for="(place, index) in places"
               :key="index"
-              class="min-w-[250px] lg:min-w-[300px] max-w-[300px] h-[400px] bg-white rounded-xl shadow-md hover:shadow-lg transition p-4 flex-shrink-0 snap-start flex flex-col"
+              class="min-w-[250px] lg:min-w-[300px] max-w-[300px] h-[400px] bg-white rounded-xl shadow-md hover:shadow-lg transition p-4 flex-shrink-0 snap-start flex flex-col items-center text-center"
             >
               <img
                 :src="place.image"
@@ -63,7 +65,7 @@ const scrollRight = () => {
 }
 
 const places = [
-  { title: "Аквапарк АкваЛоо", description: "Единственный из аквапарков Черноморского побережья, который работает круглый год.", image: "/images/2.png" },
+  { title: "Аквапарк АкваЛоо", description: "Круглогодичный аквапарк Черноморского побережья.", image: "/images/2.png" },
   { title: "Церковь Симона Кананита", description: "Одно из главных украшений курортного поселка.", image: "/images/11.png" },
   { title: "Дача доктора Павлова", description: "Самая красивая дача в округе Сочи.", image: "/images/5.png" },
   { title: "Лестница Шереметева", description: "Лестница к бывшему дому графа.", image: "/images/6.png" },
@@ -86,7 +88,6 @@ const places = [
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  line-clamp: 3; /* ← вот это добавляем */
+  line-clamp: 3;
 }
-
 </style>

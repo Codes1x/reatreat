@@ -31,7 +31,7 @@
         <h3 class="text-lg font-semibold mb-3">Контакты</h3>
         <p class="text-gray-300 text-sm mb-1">📍 Сочи, п. Лоо</p>
         <p class="text-gray-300 text-sm">
-          📞 <a href="tel:+79528361437" class="hover:text-white">+7 (952) 836-14-37</a>
+          📞 <a href="tel:+79181118959" class="hover:text-white">+7 (918) 111-89-59</a> 
         </p>
         <p class="text-gray-300 text-sm">
           📧 <a href="mailto:retreat@sonata.ru" class="hover:text-white">retreat@sonata.ru</a>

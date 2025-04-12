@@ -1,6 +1,6 @@
 <template>
     <section class="bg-white rounded-2xl shadow-md p-6 md:p-10 max-w-4xl mx-auto text-gray-800 space-y-6">
-      <h1 class="text-3xl md:text-4xl font-bold text-[#143642] text-center">Акции</h1>
+      <h1 class="text-3xl md:text-4xl font-bold text-[#143642] text-center">Специальная программа для Организаторов</h1>
   
       <h2 class="text-xl md:text-2xl font-semibold text-[#143642] text-center">Ретритный центр «Соната»</h2>
   

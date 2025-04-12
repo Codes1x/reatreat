@@ -16,7 +16,7 @@
             <div>
               <h3 class="text-lg font-semibold text-gray-900">На машине</h3>
               <p class="text-gray-600 mt-1">
-                В навигаторе введите <span class="font-medium">«Соната», г. Сочи, ул. Декабристов</span>
+                В навигаторе введите <span class="font-medium">«Соната», г. Сочи, ул. Декабристов, д. 117</span>
               </p>
               <a
                 href="https://yandex.ru/map-widget/v1/-/CHVoYMkz"
@@ -39,7 +39,6 @@
               <h3 class="text-lg font-semibold text-gray-900">Поезд</h3>
               <p class="text-gray-600 mt-1">
                 До станции Лоо<br />
-                <span class="font-medium text-gray-900">50 мин на машине</span>
               </p>
             </div>
           </div>

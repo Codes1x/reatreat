@@ -2,7 +2,7 @@
   <section class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-stretch justify-between mt-[-50px]">
     <div class="w-full md:w-1/2 md:pr-8 flex flex-col justify-center">
       <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-6">
-        <span class="text-green-600">Пространство для ваших мероприятий</span><br />в Сочи
+        <span class="text-green-600">Пространство для ваших мероприятий в Сочи</span>
       </h1>
       <p class="text-gray-900 mb-8 text-lg">
         Дорогой друг! Мы с радостью приветствуем тебя в уютном пространстве ретритного отеля «Соната» — месте, где созданы все условия для глубокого погружения в практику, отдыха души и тела. Здесь каждый твой ретрит станет особенным, а участники будут уезжать с чувством благодарности и желанием вернуться снова:
@@ -46,7 +46,7 @@
     <div class="w-full md:w-1/2 flex justify-center items-stretch mt-8 md:mt-0">
       <div class="rounded-2xl shadow-lg overflow-hidden w-full h-auto border border-gray-200">
         <img
-          src="/images/photo_2024-10-25_15-43-44.jpg"
+          src="/images/photo_2025-04-09_15-19-17.jpg" 
           alt="Йога на открытом воздухе"
           class="w-full h-full object-cover"
         />
