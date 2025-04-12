@@ -1,0 +1,9 @@
+[33m58d7d51[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to origin/main
+[33m057bd4a[m HEAD@{1}: commit (merge): Merge remote-tracking branch 'origin/main'
+[33m4e139ca[m HEAD@{2}: rebase (abort): returning to refs/heads/main
+[33m58d7d51[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{3}: pull origin main --rebase (start): checkout 58d7d5106416c28c8b92c2b7c38458b5815741f6
+[33m4e139ca[m HEAD@{4}: commit: Обновлён блок контактов: два номера, tel-ссылки, карта расширена
+[33md1c43af[m HEAD@{5}: commit: 🔥 Обновления: очистка истории, обновление страниц и компонентов
+[33mcf335bd[m HEAD@{6}: commit: ЁЯз╣ ╨г╨┤╨░╨╗╤С╨╜ my-project.zip ╨╕ ╨┤╨╛╨▒╨░╨▓╨╗╨╡╨╜ ╨▓ .gitignore
+[33mdd647a9[m HEAD@{7}: commit: 🧹 Удалён my-project.zip и добавлен в .gitignore
+[33m64636d3[m HEAD@{8}: commit: 🔥 Обновление: добавлен PageHeader, обновлён футер и блок питания
