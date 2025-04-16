@@ -27,6 +27,9 @@ interface _GlobalComponents {
     'GuestsContactForm': typeof import("../components/guests/ContactForm.vue")['default']
     'GuestsHeroSection': typeof import("../components/guests/HeroSection.vue")['default']
     'GuestsPageHeader': typeof import("../components/guests/PageHeader.vue")['default']
+    'GuestsPopup': typeof import("../components/guests/Popup.vue")['default']
+    'GuestsRoomCard': typeof import("../components/guests/RoomCard.vue")['default']
+    'GuestsRoomsSection': typeof import("../components/guests/RoomsSection.vue")['default']
     'LongStayIncludedServices': typeof import("../components/long-stay/IncludedServices.vue")['default']
     'LongStay': typeof import("../components/long-stay/LongStay.vue")['default']
     'OrganizersCateringOptions': typeof import("../components/organizers/CateringOptions.vue")['default']
@@ -137,6 +140,9 @@ interface _GlobalComponents {
     'LazyGuestsContactForm': LazyComponent<typeof import("../components/guests/ContactForm.vue")['default']>
     'LazyGuestsHeroSection': LazyComponent<typeof import("../components/guests/HeroSection.vue")['default']>
     'LazyGuestsPageHeader': LazyComponent<typeof import("../components/guests/PageHeader.vue")['default']>
+    'LazyGuestsPopup': LazyComponent<typeof import("../components/guests/Popup.vue")['default']>
+    'LazyGuestsRoomCard': LazyComponent<typeof import("../components/guests/RoomCard.vue")['default']>
+    'LazyGuestsRoomsSection': LazyComponent<typeof import("../components/guests/RoomsSection.vue")['default']>
     'LazyLongStayIncludedServices': LazyComponent<typeof import("../components/long-stay/IncludedServices.vue")['default']>
     'LazyLongStay': LazyComponent<typeof import("../components/long-stay/LongStay.vue")['default']>
     'LazyOrganizersCateringOptions': LazyComponent<typeof import("../components/organizers/CateringOptions.vue")['default']>
@@ -253,6 +259,9 @@ export const Events: typeof import("../components/events/Events.vue")['default']
 export const GuestsContactForm: typeof import("../components/guests/ContactForm.vue")['default']
 export const GuestsHeroSection: typeof import("../components/guests/HeroSection.vue")['default']
 export const GuestsPageHeader: typeof import("../components/guests/PageHeader.vue")['default']
+export const GuestsPopup: typeof import("../components/guests/Popup.vue")['default']
+export const GuestsRoomCard: typeof import("../components/guests/RoomCard.vue")['default']
+export const GuestsRoomsSection: typeof import("../components/guests/RoomsSection.vue")['default']
 export const LongStayIncludedServices: typeof import("../components/long-stay/IncludedServices.vue")['default']
 export const LongStay: typeof import("../components/long-stay/LongStay.vue")['default']
 export const OrganizersCateringOptions: typeof import("../components/organizers/CateringOptions.vue")['default']
@@ -363,6 +372,9 @@ export const LazyEvents: LazyComponent<typeof import("../components/events/Event
 export const LazyGuestsContactForm: LazyComponent<typeof import("../components/guests/ContactForm.vue")['default']>
 export const LazyGuestsHeroSection: LazyComponent<typeof import("../components/guests/HeroSection.vue")['default']>
 export const LazyGuestsPageHeader: LazyComponent<typeof import("../components/guests/PageHeader.vue")['default']>
+export const LazyGuestsPopup: LazyComponent<typeof import("../components/guests/Popup.vue")['default']>
+export const LazyGuestsRoomCard: LazyComponent<typeof import("../components/guests/RoomCard.vue")['default']>
+export const LazyGuestsRoomsSection: LazyComponent<typeof import("../components/guests/RoomsSection.vue")['default']>
 export const LazyLongStayIncludedServices: LazyComponent<typeof import("../components/long-stay/IncludedServices.vue")['default']>
 export const LazyLongStay: LazyComponent<typeof import("../components/long-stay/LongStay.vue")['default']>
 export const LazyOrganizersCateringOptions: LazyComponent<typeof import("../components/organizers/CateringOptions.vue")['default']>
